@@ -3,11 +3,28 @@
     //Problema: Lançar Notas
     /*
     No fim do ano letivo, o professor terá que informar ao sistema a nota do trimestre de cada um dos seus 15 alunos.
-    Apresente, ao fim do programa, quantos alunos ficaram com nota abaixo de 7 e quantos alunos ficaram com nota maior ou acima de 7. Apresente, também, a média das notas da turma.
+    Apresente, ao fim do programa, quantos alunos ficaram com nota abaixo de 7 e quantos alunos ficaram com nota maior ou igual a 7. Apresente, também, a média das notas da turma.
     */
 
     //Entrada
+    const alunos = 15;
 
+    //Processamento
+    let somaNotas = 0;
+    let notasAbaixo7 = 0;
+    let notasAcima7 = 0;
+
+    for (let i = 1; i <= alunos; i++) {
+        const nota = Number(prompt(`Informe a nota do aluno ${i} de ${alunos}:`));
+        if (nota < 7) notasAbaixo7++
+        else notasAcima7++;
+        somaNotas = somaNotas + nota;
+    }
+
+    const media = somaNotas / alunos;
+
+    //Saída
+    document.write(`Há ${notasAbaixo7} notas abaixo de 7 e ${notasAcima7} notas acima de 7. A média da turma é de ${media.toFixed(1)}.`);
 
     //Processamento
 

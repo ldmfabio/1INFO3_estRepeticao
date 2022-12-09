@@ -9,11 +9,23 @@
     */
 
     //Entrada
-
+    const totalCidadaos = 15;
 
     //Processamento
+    let notaMenorQue5 = 0;
+    let somaNotas = 0;
 
+    for (let i = 1; i <= totalCidadaos; i++) {
+        const nota = Number(prompt(`Qual a nota dada para a decoração natalina (Cidadão ${i} de ${totalCidadaos})`));
+
+        somaNotas = somaNotas + nota;
+        if (nota < 5) {
+            notaMenorQue5++; // Equivalente a notaMenorQue5 = notaMenorQue5 + 1;
+        }
+    }
+
+    const media = somaNotas / totalCidadaos;
 
     //Saída
-
+    document.write(`${notaMenorQue5} cidadãos deram nota menor do que 5. A média das notas é de ${media.toFixed(1)}.`);
 </script>

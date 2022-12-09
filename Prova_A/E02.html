@@ -9,11 +9,17 @@
     */
 
     //Entrada
-
+    const funcionarios = parseInt(prompt(`Quantos funcionários a empresa possui?`));
 
     //Processamento
+    let totalAguaConsumida = 0;
+    for (let i = 1; i <= funcionarios; i++) {
+        const agua = Number(prompt(`Quantos litros de água o funcionário ${i} de ${funcionarios} toma por dia?`));
+        totalAguaConsumida = totalAguaConsumida + agua;
+    }
 
+    const mediaPorFuncionario = totalAguaConsumida / funcionarios;
 
     //Saída
-
+    document.write(`São consumidos ${totalAguaConsumida} litros de água pelos ${funcionarios} funcionários. A média de consumo por funcionário é de ${mediaPorFuncionario.toFixed(1)} litros de água por dia.`);
 </script>

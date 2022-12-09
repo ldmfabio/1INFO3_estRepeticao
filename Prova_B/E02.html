@@ -8,11 +8,29 @@
     */
 
     //Entrada
-
+    const votantes = 14;
 
     //Processamento
+    let votosChapa1 = 0;
+    let votosChapa2 = 0;
 
+    for (let votosRealizados = 1; votosRealizados <= votantes; votosRealizados++) {
+        const voto = parseInt(prompt(`Em que Chapa deseja confiar o voto (1-Chapa 1 | 2-Chapa 2):`));
+        if (voto === 1) {
+            votosChapa1++;
+        }
+        else if (voto === 2) {
+            votosChapa2 = votosChapa2 + 1;
+        }
+    }
 
     //Saída
-
+    if (votosChapa1 > votosChapa2) {
+        const percentual = (votosChapa1 / votantes) * 100;
+        document.write(`A chapa ganhadora é a Chapa 1 com ${percentual.toFixed(1)}% de votos!`);
+    }
+    else if (votosChapa2 > votosChapa1) {
+        const percentual = (votosChapa2 / votantes) * 100;
+        document.write(`A chapa ganhadora é a Chapa 2 com ${percentual.toFixed(1)}% de votos!`);
+    }
 </script>

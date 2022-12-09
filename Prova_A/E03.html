@@ -11,8 +11,32 @@
 
 
     //Processamento
+    let chapa1 = 0;
+    let chapa2 = 0;
 
+    for (let i = 1; i <= 14; i++) {
+        const voto = parseInt(prompt(`Informe a chapa que deseja votar (1 ou 2):`));
+        if (voto === 1) {
+            chapa1++;
+        }
+        else if (voto === 2) {
+            chapa2++;
+        }
+    }
 
+    let percVotos = 0;
+    if (chapa1 > chapa2) {
+        percVotos = (chapa1 / 14) * 100;
+        document.write(`A chapa ganhadora é a Chapa 1 com ${percVotos.toFixed(2)}% dos votos.`);
+    }
+    else if (chapa2 > chapa1) {
+        percVotos = (chapa2 / 14) * 100;
+        document.write(`A chapa ganhadora é a Chapa 2 com ${percVotos.toFixed(2)}% dos votos.`);
+    }
+    else {
+        document.write(`Empate! Refaça a eleição!`);
+        ]
+    }
     //Saída
 
 </script>

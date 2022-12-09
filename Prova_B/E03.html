@@ -10,11 +10,22 @@
     */
 
     //Entrada
-
+    const alunos = parseInt(prompt(`Informe a quantidade de alunos!`));
 
     //Processamento
+    let sucoAbacaxi = 0;
+    let sucoLaranja = 0;
 
+    for (let i = 1; i <= alunos; i++) {
+        const sabor = prompt(`Qual sabor do suco? (A-Abacaxi | L-Laranja)`).toUpperCase();
+        if (sabor === "L") {
+            sucoLaranja++
+        }
+        else if (sabor === "A") {
+            sucoAbacaxi++;
+        }
+    }
 
     //Saída
-
+    document.write(`${sucoAbacaxi} alunos consumirão suco de Abacaxi e ${sucoLaranja} alunos consumirão suco de Laranja!`);
 </script>

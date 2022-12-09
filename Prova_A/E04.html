@@ -7,11 +7,26 @@
     */
 
     //Entrada
-
+    const alunos = 10;
 
     //Processamento
+    let somaNotas = 0;
+    let notasAbaixo6 = 0;
+    let notasAcima6 = 0;
 
+    for (let i = 1; i <= alunos; i++) {
+        const nota = Number(prompt(`Informe a nota do aluno ${i} de ${alunos}:`));
+        if (nota < 6) {
+            notasAbaixo6++;
+        }
+        else {
+            notasAcima6++;
+            somaNotas = somaNotas + nota;
+        }
+    }
+
+    const media = somaNotas / notasAcima6;
 
     //Saída
-
+    document.write(`Há ${notasAbaixo6} notas abaixo de 6 e ${notasAcima6} notas acima de 6. A média das notas dos alunos que conseguiram nota maior ou igual a 6 é ${media.toFixed(1)}.`);
 </script>
